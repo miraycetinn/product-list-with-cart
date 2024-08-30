@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+
+    <title>| Product list with cart</title>
+
+    <style>
+        .attribution { font-size: 11px; text-align: center; }
+        .attribution a { color: hsl(228, 45%, 44%); }
+    </style>
+</head>
+<body style="background-color:#FBF8F6;">
+
+<div class="main-content">
+    <div class="desserts">
+        <h1 class="red-hat-text-700">Desserts</h1>
+        <div class="cards" style="grid-template-columns: repeat(3, 1fr)"></div>
+    </div>
+    <div class="cart">
+        <h3 style="margin-left: 40px" class="your-cart">Your Cart</h3>
+        <div class="cartContent">
+            <img src="assets/illustration-empty-cart.svg" width="200">
+            <span style="color: var(--RoseC500)">Your added items will appear here</span>
+        </div>
+    </div>
+
+</div>
+
+<script src="control.js"></script>
+
+
+<div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+    Coded by <a href="https://github.com/miraycetinn">Miray Çetin</a>.
+</div>
+</body>
+</html>
