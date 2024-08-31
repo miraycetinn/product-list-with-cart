@@ -26,12 +26,13 @@ function showData(data) {
         imgElement.src = item.image.desktop; 
 
         // İçeriği basitçe innerHTML ile ekledik
+        // her bir buton için data-index değeri tuttuk. bu butona tıklandığında tuttuğumuz index değeri sayesinde hangi butona tıkladığımızı anlarız. satır-32
         itemDiv.innerHTML = `
-      <div class="thumbnail_btn">
-        <a class="btn" data-index="${index}">
-          <img src="assets/icon-add-to-cart.svg" alt="store" />
-          Sepete Ekle
-        </a>
+      <div class="thumbnail_btn" style="align-items: center">
+        <button class="btn" data-index="${index}" style="border: none; background-color: transparent; align-items: center">  
+          <img src="assets/icon-add-to-cart.svg" alt="store" style="vertical-align: middle" />
+          <span>Add To Cart</span>
+        </button>
       </div>
       <p class="Type">${item.category}</p>
       <h5 class="Title">${item.name}</h5>
@@ -94,7 +95,8 @@ function updateCart() {
       <span>${cartItem.quantity}x</span>
       <span>@ $${cartItem.item.price.toFixed(2)}</span>
       <span>$${itemTotal.toFixed(2)}</span>
-      <button class="remove-item">Sil</button>
+      <button class="remove-item"> <img src="assets/icon-remove-item.svg"></button>
+      <hr class="cart-item-hr">
     `;
 
         cartElement.appendChild(contentDiv);
@@ -113,7 +115,7 @@ function updateCart() {
     let orderElement = document.createElement('div');
     orderElement.className = 'order-total';
     orderElement.innerHTML = `
-    <span>Toplam</span>
+    <span class="order-total-text">Order Total</span>
     <span>$${total.toFixed(2)}</span>
   `;
 

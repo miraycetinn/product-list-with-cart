@@ -37,21 +37,27 @@
 
 .main-content{
     display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
 }
 .desserts{
+    width: 60%;
+    margin-left: 30px;
 }
 
 .cards{
     display: grid;
-    grid-template-columns: repeat(1, 1fr)
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
 }
 
 .cart{
+    margin-top: 30px;
     box-shadow: 10px 10px 60px var(--RoseC300);
     background-color: var(--RoseC50);
-    height: fit-content;
-    width: 800px;
+    width: 30%;
     border-radius: 20px;
+    height: fit-content;
 }
 
 .cartContent{
@@ -70,24 +76,38 @@
 
 .thumbnail_card{
     border-radius: 5px;
+    width: 280px;
 
 }
 
 .thumbnail_btn{
+    display: flex;
     background-color:white;
     padding: .5em 1em;
     width: fit-content;
     border-radius: 15px;
     border: 1px solid black;
+    align-items: center;
+    position: absolute;
+    bottom: 17%;
+    left: 20%;
+    background-color: rgba(255, 255, 255, 0.8);
 }
 .thumbnail_btn:hover{
     background-color: var(--RoseC100);
     cursor: pointer;
 }
 
+.cart-item-hr{
+    border-color: var(--RoseC500);
+    background-color: var(--RoseC500);
+    opacity: 20%;
+}
+
 .items{
     margin: .6em 0;
     flex-grow: 1;
+    position: relative;
 }
 .items .Type{
     font-size: 13px;
@@ -110,9 +130,10 @@
     margin: 0 .4em;
     position: relative;
     flex-grow: 1;
+    width: 420px;
 }
 .remove-item{
-    border: 1px solid black;
+    border: none;
     position: absolute;
     right: 0;
     border-radius: 5px;
@@ -123,10 +144,15 @@
 
 .order-total{
     display: flex;
-    padding: 1rem;
     justify-content: space-between;
     font-weight: var(--Boldweight);
     font-size:1.1rem;
+    width: 420px;
+}
+.order-total-text{
+    color: var(--RoseC400);
+    font-weight: var(--Lightweight);
+    font-size: 15px;
 }
 .order{
     font-weight: var(--Lightweight);
@@ -148,7 +174,6 @@
     color: var(--RoseC100);
     padding: 1em;
     border-radius: 15px;
-    display: block;
     text-align: center;
 }
 .confirm-btn:hover{
